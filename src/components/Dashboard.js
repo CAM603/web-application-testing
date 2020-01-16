@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({strike}) => {
 
     return (
-        <div>
+        <div style={{display: 'flex', }}>
             <div>
                 <h2>Strike</h2>
-                <button>push</button>
+                <button onClick={strike}>push</button>
             </div>
             <div>
                 <h2>Ball</h2>

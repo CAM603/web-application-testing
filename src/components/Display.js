@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Display = () => {
+const Display = ({ strikes, balls }) => {
 
     return (
-        <div>
+        <div style={{display: 'flex',}}>
             <div>
                 <h2>Balls</h2>
-                <p>0</p>
+                <p>{balls}</p>
             </div>
             <div>
                 <h2>Strikes</h2>
-                <p>0</p>
+                <p>{strikes}</p>
             </div>
         </div>
     )
