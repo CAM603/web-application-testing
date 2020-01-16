@@ -1,24 +1,36 @@
 import React from 'react';
 
-const Dashboard = ({strike}) => {
+const Dashboard = ({strike, ball, foul, hit}) => {
 
     return (
         <div style={{display: 'flex', }}>
             <div>
                 <h2>Strike</h2>
-                <button onClick={strike}>push</button>
+                <button 
+                onClick={strike}
+                data-testid="strike-btn"
+                >strike</button>
             </div>
             <div>
                 <h2>Ball</h2>
-                <button>push</button>
+                <button 
+                onClick={ball}
+                data-testid="ball-btn"
+                >push</button>
             </div>
             <div>
                 <h2>Foul</h2>
-                <button>push</button>
+                <button 
+                onClick={foul}
+                data-testid="foul-btn"
+                >push</button>
             </div>
             <div>
                 <h2>Hit</h2>
-                <button>push</button>
+                <button 
+                onClick={hit}
+                data-testid="hit-btn"
+                >push</button>
             </div>
         </div>
     )
