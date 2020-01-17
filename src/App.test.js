@@ -4,6 +4,10 @@ import App from './App';
 
 afterEach(cleanup);
 
+test('App renders', () => {
+  render(<App />);
+})
+
 test('balls is on the display', () => {
   const { getByText } = render(<App />);
   
@@ -63,13 +67,34 @@ test('foul button can only add strikes up to two', () => {
 
 test('hit button resets strikes and balls', () => {
   const app = render(<App />);
-
+  
   const hitBtn = app.getByTestId('hit-btn');
   const strikes = app.getByTestId('strikes');
   const balls = app.getByTestId('balls');
-
+  
   fireEvent.click(hitBtn);
   expect(strikes.textContent).toBe('0')
   expect(balls.textContent).toBe('0')
-
+  
 })
+
+// test('alert fired after strikeout', () => {
+//   const app = render(<App />);
+
+//   window.alert = jest.fn();
+  
+//   const strikes = app.getByTestId('strikes');
+//   expect(strikes.textContent).toBe('3')
+//   expect(window.alert).toHaveBeenCalledWith('')
+// })
+
+// test('calls onClick on button click', ()  => {
+
+//   const onClick = jest.fn();
+//   const app = render(<App/>);
+
+//   const buttons = app.getAllByText('push')
+
+//   fireEvent.click(buttons);
+//   expect(onClick).toHaveBeenCalled();
+// })

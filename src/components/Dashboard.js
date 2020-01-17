@@ -9,7 +9,7 @@ const Dashboard = ({strike, ball, foul, hit}) => {
                 <button 
                 onClick={strike}
                 data-testid="strike-btn"
-                >strike</button>
+                >push</button>
             </div>
             <div>
                 <h2>Ball</h2>
